@@ -7,7 +7,7 @@
 - **Model**: HP OMEN Gaming Laptop 16-wf0015nt (7Q7W7EA)
 - **İşlemci**: Intel Core i9-13900HX (5.4 GHz Turbo, 36 MB L3 cache, 24 core, 32 thread)
 - **RAM**: 32 GB DDR5-5600 MHz (2x16 GB)
-- **GPU**: NVIDIA GeForce RTX 4070 Mobile (8 GB GDDR6, 80W TGP)
+- **GPU**: NVIDIA GeForce RTX 4070 Mobile (8 GB GDDR6, 140W TGP)
 - **iGPU**: Intel UHD Graphics (entegre)
 - **Ekran**: 16.1" QHD (2560x1440), 240Hz, 3ms, IPS, 300 nits, 100% sRGB
 - **MUX Switch**: ✅ VAR (Advanced Optimus/Dynamic Display Switch)
@@ -39,8 +39,8 @@
 - ✅ IOMMU desteği
 - ✅ MUX Switch (Advanced Optimus ile)
 - ✅ İki GPU (Intel UHD + RTX 4070)
-- ✅ Yeterli RAM (32 GB ideal)
-- ✅ SSD depolama (performans için önemli)
+- ✅ Yeterli RAM (32 GB önerilir)
+- ✅ SSD depolama (performans için önerilir)
 
 ### Yazılım Gereksinimleri
 - CachyOS (güncel sürüm)
@@ -50,9 +50,9 @@
 - VirtIO sürücüleri
 
 ### Önemli Notlar
-- **MUX Switch**: Bu laptop Advanced Optimus teknolojisine sahip, bu da GPU passthrough için idealdir
+- **MUX Switch**: Bu laptop Advanced Optimus teknolojisine sahip, bu da GPU passthrough için uygundur
 - **Dynamic Display Switch (DDS)**: Ekran otomatik olarak GPU'lar arasında geçiş yapabilir
-- **80W TGP RTX 4070**: Yüksek performanslı GPU passthrough için mükemmel
+- **140W TGP RTX 4070**: Yüksek TGP değeri ile GPU passthrough performansı desteklenir
 
 ---
 
@@ -167,7 +167,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 - `nouveau.modeset=0`: Nouveau sürücüsünün KMS (Kernel Mode Setting) özelliğini devre dışı bırakır
 - `nvidia-drm.modeset=0`: NVIDIA DRM sürücüsünün modesetting özelliğini devre dışı bırakır
 - Bu yöntem sürücüleri tamamen blacklist etmez, sadece display kontrolünü engeller
-- Hibrit kullanım için daha uygun (CachyOS + VM senaryonuz için ideal)
+- Hibrit kullanım için daha uygun (CachyOS + VM senaryonuz için uygun)
 
 ### 4. VFIO Modüllerini Yükleme
 **Dosya Yolu**: `/etc/mkinitcpio.conf`
@@ -993,23 +993,23 @@ lscpu
 2. **BIOS Güncellemesi**: En son BIOS sürümünü kullanın (HP Support'tan)
 3. **Sürücüler**: Windows'ta en son NVIDIA sürücülerini kurun
 4. **MUX Switch**: Advanced Optimus teknolojisi sayesinde GPU geçişi otomatik olabilir
-5. **Performans**: RTX 4070 Mobile 80W TGP ile mükemmel performans bekleyebilirsiniz
+5. **Performans**: RTX 4070 Mobile 140W TGP ile yüksek performans sağlar
 6. **Güvenlik**: Secure Boot'u devre dışı bırakmanız gerekebilir
-7. **Sıcaklık**: OMEN Tempest Cooling sistemi sayesinde sıcaklık problemi yaşamazsınız
+7. **Sıcaklık**: OMEN Tempest Cooling sistemi termal yönetim sağlar
 
 ---
 
 ## 🎯 Sonuç
 
-Bu klavuz, HP OMEN Gaming Laptop 16-wf0015nt (7Q7W7EA) modeliniz için özel olarak hazırlanmıştır. Advanced Optimus ve MUX Switch teknolojileri sayesinde GPU passthrough kurulumu daha kolay ve verimli olacaktır.
+Bu klavuz, HP OMEN Gaming Laptop 16-wf0015nt (7Q7W7EA) modeliniz için hazırlanmıştır. Advanced Optimus ve MUX Switch teknolojileri GPU passthrough kurulumunu destekler.
 
-**Sisteminizin Avantajları:**
+**Sisteminizin Özellikleri:**
 - ✅ MUX Switch ile donanım seviyesinde GPU geçişi
 - ✅ Advanced Optimus ile otomatik optimizasyon
-- ✅ 80W TGP RTX 4070 ile yüksek performans
-- ✅ i9-13900HX ile 24 çekirdek güç
-- ✅ 32 GB DDR5 RAM ile yeterli bellek
-- ✅ QHD 240Hz ekran ile mükemmel görüntü
+- ✅ 140W TGP RTX 4070 ile yüksek performans
+- ✅ i9-13900HX ile 24 çekirdek işlem gücü
+- ✅ 32 GB DDR5 RAM
+- ✅ QHD 240Hz ekran desteği
 
 Herhangi bir sorunla karşılaştığınızda, sorun giderme bölümünü kontrol edin ve gerekirse topluluk kaynaklarından yardım alın.
 
